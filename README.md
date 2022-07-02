@@ -1,5 +1,5 @@
 # EstruturaDeDados
- atividades da cadeira de estrutura de dados
+ ## Atividades da cadeira de estrutura de dados
     A atividade 1 é: Conversão de expressões infixa para pós-fixa
     A atividade 2 é: Multiplicação de números inteiros gigantes
     A atividade 3 é: Conversão de array ordenado em uma árvore binária balanceada
