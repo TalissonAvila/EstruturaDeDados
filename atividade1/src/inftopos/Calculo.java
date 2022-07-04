@@ -8,11 +8,11 @@ import java.util.Stack;
  */
 public class Calculo {
 
-    public static Integer resultado(String posfixa) {
-        int resposta;
+    public static Double resultado(String posfixa) {
+        double resposta;
         int contador = -1;
-        int auxiliar = 0;
-        Stack<Integer> pilha = new Stack<>();
+        double auxiliar = 0;
+        Stack<Double> pilha = new Stack<>();
         for (int i = 0; i < posfixa.length(); i++) {
             if(posfixa.length() == 1){
                 auxiliar = Character.getNumericValue(posfixa.charAt(i));
@@ -28,12 +28,13 @@ public class Calculo {
                 case '7':
                 case '8':
                 case '9':
-                    pilha.push(Character.getNumericValue(posfixa.charAt(i)));
+                    
+                    pilha.push((double) Character.getNumericValue(posfixa.charAt(i)));
                     
                     contador++;
                     break;
                 case '+':
-                    int res = 0;
+                    double res = 0;
                     for (int aux = contador; aux >= 0; aux--) {
                         if (pilha.isEmpty()) {
                             break;
@@ -47,8 +48,8 @@ public class Calculo {
                     if (pilha.isEmpty()) {
                         break;
                     }
-                    int res2 = pilha.pop();
-                    int res1 = pilha.pop() - res2;
+                    double res2 = pilha.pop();
+                    double res1 = pilha.pop() - res2;
                     pilha.push(res1);
                     auxiliar = res1;
                     break;

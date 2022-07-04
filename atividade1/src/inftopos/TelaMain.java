@@ -171,8 +171,8 @@ public class TelaMain extends javax.swing.JFrame {
         String posfixa = Conversao.posFixa(string1);
         lblExpressao.setText(string1);
         lblPosFixa.setText(posfixa);
-        int aux = Calculo.resultado(posfixa);
-        lblResultado.setText(Integer.toString(aux));
+        double aux = Calculo.resultado(posfixa);
+        lblResultado.setText(Double.toString(aux));
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void btnCalcularKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCalcularKeyPressed
